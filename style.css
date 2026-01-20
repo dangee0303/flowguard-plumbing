@@ -412,7 +412,7 @@ RESPONSIVE
   padding: 25px 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 30px; /* gap between each service card */
-  max-height: fit-content;
+  max-height: fit-content   ;
 }
 
 .service-card-horizontal:hover {
@@ -423,14 +423,14 @@ RESPONSIVE
 .service-card-horizontal img {
     margin-left: 1em;
   width: 350px; /* larger image */
-  height: 280px;
+  max-height: 250px;
   object-fit: cover;
   border-radius: 12px;
   flex-shrink: 0;
 }
 
 .service-content {
-  display: flex;
+      display: flex;
   flex-direction: column;
   justify-content: center; /* vertically centers content */
   gap: 15px;
@@ -460,6 +460,7 @@ RESPONSIVE
   .service-card-horizontal {
     gap: 25px;
   }
+
 
   .service-card-horizontal img {
     width: 300px;
