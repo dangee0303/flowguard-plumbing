@@ -1,0 +1,616 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  color: #1A1A1A;
+  background-color: #F8F9FA;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: #36656B;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff; /* Green accent */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a.active::after,
+.nav-links a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  position: relative;
+  height: 70vh;
+  min-height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url("images/hero-plumbing.jpg") center/cover no-repeat;
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 1.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.hero-text h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+.btn {
+  background: #fff;
+  color: #000;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(40,167,69,0.3);
+}
+
+/* =========================
+   SERVICES
+========================= */
+.services {
+  padding: 80px 40px;
+  text-align: center;
+  background: #FFFFFF;
+}
+
+.services h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.service-card {
+  background: #F1F3F5;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card {
+  max-width: 360px;
+  width: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  margin: 20px 0 10px;
+  font-size: 20px;
+}
+
+.service-card p {
+  padding: 0 20px 25px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about {
+  background: #F8F9FA;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* =========================
+   CTA
+========================= */
+.services-cta {
+  background: #36656B;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.services-cta h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.services-cta p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: #1A1A1A;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+  .services-grid {
+    gap: 20px;
+  }
+}
+/* =========================
+SERVICES PAGE HERO
+========================= */
+.services-hero {
+  position: relative;
+  height: 55vh;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.services-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.35)),
+    url("images/hero-plumbing.jpg") center/cover no-repeat;
+}
+
+.services-hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =========================
+SERVICES PAGE GRID
+========================= */
+.services-page {
+  padding: 90px 40px;
+  background: #FFFFFF;
+}
+
+.services-page-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.service-page-card {
+  background: #F1F3F5;
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: center;
+  max-width: 360px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-page-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.service-page-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-page-card h3 {
+  margin: 22px 0 10px;
+  font-size: 20px;
+}
+
+.service-page-card p {
+  padding: 0 22px 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================
+BUTTON VARIANT
+========================= */
+.btn-outline {
+  background: transparent;
+  color: #36656B;
+  border: 2px solid #36656B;
+  margin-bottom: 25px;
+}
+
+.btn-outline:hover {
+  background: #36656B;
+  color: #fff;
+}
+
+/* =========================
+BOTTOM CTA
+========================= */
+.services-bottom-cta {
+  background: #36656B;
+  color: #fff;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.services-bottom-cta h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.services-bottom-cta p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/* =========================
+NAV CTA BUTTON (OPTIONAL)
+========================= */
+.btn-nav {
+  background: #fff;
+  color: #36656B !important;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.btn-nav:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .services-page {
+    padding: 70px 20px;
+  }
+
+  .services-bottom-cta h2 {
+    font-size: 26px;
+  }
+}
+.service-card-horizontal {
+  display: flex;
+  align-items: center; /* vertically centers image with content */
+  gap: 40px; /* space between image and content */
+  background: #F1F3F5;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 25px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px; /* gap between each service card */
+  max-height: fit-content;
+}
+
+.service-card-horizontal:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.service-card-horizontal img {
+    margin-left: 1em;
+  width: 350px; /* larger image */
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically centers content */
+  gap: 15px;
+  flex: 1; /* take remaining space */
+}
+
+.service-content h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.service-content p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.service-content .btn {
+  align-self: center; /* center button under content */
+  margin-top: 10px;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .service-card-horizontal {
+    gap: 25px;
+  }
+
+  .service-card-horizontal img {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card-horizontal {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .service-card-horizontal img {
+    width: 100%;
+    height: auto;
+  }
+
+  .service-content .btn {
+    align-self: center;
+  }
+}
+/* ABOUT PAGE */
+.about {
+  background: #F8F9FA;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #36656B; /* accent color */
+}
+
+.about p {
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #1A1A1A;
+}
+
+.about-cards {
+  background: #FFFFFF;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.about-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-card {
+  background: #EAF3F5; /* subtle accent background */
+  border-left: 5px solid #36656B; /* accent color strip */
+  border-radius: 10px;
+  padding: 25px 20px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.about-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #36656B; /* accent color */
+}
+
+.about-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #1A1A1A;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .about-cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.contact-options {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact-options .option-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-options .address {
+  font-size: 16px;
+  color: #1A1A1A;
+}
+
+.contact-form-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-form-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form .btn {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .contact-options .option-buttons {
+    flex-direction: column;
+  }
+}

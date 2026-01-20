@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowGuard | Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">FlowGuard</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Get in Touch</h1>
+      <p>Reach out to FlowGuard for expert plumbing services designed for quality, comfort, and long-term use.</p>
+      <a href="index.html" class="btn">Go Home</a>
+    </div>
+  </section>
+
+  <!-- CONTACT OPTIONS -->
+  <section class="contact-options">
+    <div class="option-buttons">
+      <a href="mailto:info@flowguard.com?subject=Plumbing Quote Request" class="btn btn-outline">Email Us</a>
+      <a href="tel:+1234567890" class="btn btn-outline">Call Us</a>
+    </div>
+    <p class="address">123 Main Street, Your City, Province</p>
+  </section>
+
+  <!-- REQUEST A QUOTE FORM -->
+  <section class="contact-form-section">
+    <h2>Request a Quote</h2>
+    <form id="quoteForm" action="https://formspree.io/f/mzddzyre" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number">
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option value="maintenance">Plumbing Maintenance</option>
+        <option value="drain-cleaning">Drain Cleaning</option>
+        <option value="pipe-installation">Pipe Installation</option>
+        <option value="water-heating">Water Heating Services</option>
+      </select>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    &copy; 2026 FlowGuard. All rights reserved.
+  </footer>
+
+</body>
+</html>
